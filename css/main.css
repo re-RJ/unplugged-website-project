@@ -88,9 +88,9 @@ textarea {
    ========================================================================== */
 
 /* -------------------- Base Header - Footer Styles -------------------- */
-/* * {
+* {
   border: 1px solid red;
-} */
+}
 
 header,
 footer {
@@ -122,14 +122,15 @@ header .content-wrapper {
   margin: 10px 0 20px 0;
 }
 
-header nav{
+header nav {
   width: 60%;
 }
 
 header nav ul {
   display: flex;
   justify-content: space-around;
-  width: 100%; /*solution says this should be 100%, by *{border} seems like it doesn't need width*/
+  width: 100%;
+  /*solution says this should be 100%, by *{border} seems like it doesn't need width*/
 }
 
 /******** Footer Styles ********/
@@ -138,7 +139,7 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
-} 
+}
 
 footer .content-wrapper {
   width: 55%;
@@ -175,7 +176,7 @@ footer .copyright {
 
 h3 {
   margin: 20px 0;
-  }
+}
 
 h4 {
   margin: 20px 0;
@@ -279,10 +280,6 @@ aside {
 }
 
 
-/* -------------------- MEDIA STYLES ------------------- */
-
-
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -371,15 +368,158 @@ aside {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+
+  /**************** Home Styles ****************/
+  .content-wrapper {
+    max-width: 640px;
+    margin: 100px 0;
+  }
+
+  /******** Header Styles ********/
+  header {
+    padding: 33px 0;
+  }
+
+  header .content-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  header nav {
+    width: 25%;
+  }
+
+  header nav ul {
+    justify-content: space-between;
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  /******** Hero Styles ********/
+    .hero-area h1 {
+    margin: 0;
+  }
+
+  /******** Aside Styles ********/
+  aside .content-wrapper {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 40%;
+    margin: 0;
+  }
+
+  /******** Features Styles ********/
+  .features article {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+  }
+
+  .features .features-item-description {
+    width: 50%;
+    margin-top: 30px;
+  }
+
+  /******** Reviews Styles ********/
+  .reviews article {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reviews article div {
+    width: 48%;
+  }
+
+  /******** Footer Styles ********/
+  footer .content-wrapper {
+    width: 85%;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .contact {
+    margin: 0;
+  }
+
+  footer .copyright {
+    width: 100%;
+  }
+
+  /**************** About Styles ****************/
+  .mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+.mission-content p {
+    width: 45%;
+  } 
+
+.contact-section .content-wrapper h2 {
+    width: 80%;
+  }
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  /**************** FAQ Styles ****************/
+.faq .content-wrapper {
+    justify-content: space-between;
+  }
+
+.faq-content {
+    flex-basis: 45%;
+  }
+
+.faq h2 {
+    width: 100%;
+  }
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+@media only screen and (min-width: 1200px) {
+
+  /******** Home Styles ********/
+  .content-wrapper {
+    width: 960px;
+  }
+
+  footer .content-wrapper {
+    width: 100%;
+  }
+
+  aside {
+    width: 80%;
+  }
+
+  .features .features-items {
+    width: 85%;
+  }
+
+
+  /******** About Styles ********/
+
+  /******** FAQ Styles ********/
+
 }
 
 /* ==========================================================================
@@ -389,6 +529,7 @@ aside {
    ========================================================================== */
 
 @media print {
+
   *,
   *::before,
   *::after {
@@ -456,4 +597,3 @@ aside {
     page-break-after: avoid;
   }
 }
-
