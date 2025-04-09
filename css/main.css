@@ -88,20 +88,25 @@ textarea {
    ========================================================================== */
 
 /* -------------------- Base Header - Footer Styles -------------------- */
-* {
-  outline: 1px solid red;
-}
-
+/* * {
+  border: 1px solid red;
+} */
 
 header,
 footer {
   display: flex;
 }
 
+.content-wrapper {
+  width: 90%;
+  margin: 50px 0;
+}
+
 /******** Header Styles ********/
 
 header {
   justify-content: center;
+  padding: 15px 0;
 }
 
 header .content-wrapper {
@@ -109,18 +114,23 @@ header .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 0;
 }
 
-/* header img {}
+.header-divider {
+  width: 100%;
+  margin: 10px 0 20px 0;
+}
 
-header .header-divider {} */ /*unneeded (currently?)*/
+header nav{
+  width: 60%;
+}
 
 header nav ul {
   display: flex;
   justify-content: space-around;
+  width: 100%; /*solution says this should be 100%, by *{border} seems like it doesn't need width*/
 }
-
-/*header li {}*/ /*unneeded (currently?)*/
 
 /******** Footer Styles ********/
 
@@ -130,13 +140,17 @@ footer {
   text-align: center;
 } 
 
-/* footer .content-wrapper {}
+footer .content-wrapper {
+  width: 55%;
+}
 
-footer .footer-contact {}
+footer .contact {
+  margin-bottom: 50px;
+}
 
-footer .contact {}
-
-footer .social {} */ /*unneeded (currently?)*/
+footer p {
+  margin: 0;
+}
 
 footer .social-icons {
   display: flex;
@@ -144,32 +158,28 @@ footer .social-icons {
   align-items: center;
 }
 
-footer .social-icons nav ul {
+footer .social-icons nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+}
+
+footer .copyright {
+  margin: 20px 0;
 }
 
 
-/* footer  .copyright {} */ /*unneeded (currently?)*/
-
-/* -------------------- Main Styles -------------------- */
+/* -------------------- Mobile First - Main Styles -------------------- */
 /******** Global Styles ********/
 
-/* h1,
-h2,
-h3,
-h4 {}
+h3 {
+  margin: 20px 0;
+  }
 
-h1 {}
-
-h2 {}
-
-h3 {}
-
-h4 {}
-
-p {}  */ /*unneeded (currently?)*/
+h4 {
+  margin: 20px 0;
+}
 
 /******** Home Styles ********/
 
@@ -183,13 +193,17 @@ aside {
   justify-content: center;
 }
 
-/* aside .form-description {}
-
-aside .form {} */ /*unneeded (currently?)*/
+.input-divider {
+  margin: 20px 0;
+}
 
 .features {
   display: flex;
   justify-content: center;
+}
+
+.features h2 {
+  margin-bottom: 60px;
 }
 
 .features .features-items {
@@ -199,15 +213,31 @@ aside .form {} */ /*unneeded (currently?)*/
   flex-flow: row wrap;
 }
 
-/* .features .content-wrapper {}
+.features .fontawesome-icon {
+  margin-bottom: 40px;
+}
 
-section article {}  */ /*unneeded (currently?)*/
+.features article {
+  width: 65%;
+  margin: 30px 0;
+}
+
+.features p {
+  margin: 0;
+}
 
 .reviews {
   display: flex;
   justify-content: center;
 }
 
+.reviews h2 {
+  margin-bottom: 40px;
+}
+
+.reviews h3 {
+  width: 55%;
+}
 
 /******** About Styles ********/
 
@@ -219,6 +249,10 @@ section article {}  */ /*unneeded (currently?)*/
 .contact-section {
   display: flex;
   justify-content: center;
+}
+
+.contact-content p {
+  margin: 0;
 }
 
 /******** FAQ Styles ********/
@@ -233,9 +267,16 @@ section article {}  */ /*unneeded (currently?)*/
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 50px 0 0 0;
 }
 
+.faq h2 {
+  margin-bottom: 40px;
+}
 
+.faq-content {
+  margin-bottom: 50px;
+}
 
 
 /* -------------------- MEDIA STYLES ------------------- */
