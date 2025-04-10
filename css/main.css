@@ -88,10 +88,6 @@ textarea {
    ========================================================================== */
 
 /* -------------------- Base Header - Footer Styles -------------------- */
-/* * {
-  border: 1px solid red;
-} */
-
 html {
   font-size: 1rem;
 }
@@ -100,7 +96,8 @@ body {
   font-size: 1em;
   font-family: 'Open Sans', sans-serif;
   color: #e2e3ed;
-  /* text-align: left; solution says this should be present, but unsure what its presence or lack changes*/
+  text-align: left; 
+  background-color: #202322; /*likely unneeded, but in case any image fails to load*/
 }
 
 ul,
@@ -115,17 +112,11 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 2.25em;
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  line-height: 1.25em; /*2.6875em given by style tile but doesn't match design doc images*/
-  font-weight: 500;
-}
-
 h2 {
   font-size: 1.875em;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
+  margin: 0; /*added after complete - examine why*/
 }
 
 h3,
@@ -156,7 +147,7 @@ address {
 header,
 footer {
   display: flex;
-  background: #202322;
+  background-color: #202322;
 }
 
 .content-wrapper {
@@ -165,7 +156,6 @@ footer {
 }
 
 /******** Header Styles ********/
-
 header {
   justify-content: center;
   padding: 15px 0;
@@ -203,9 +193,7 @@ header nav ul {
   justify-content: space-around;
 }
 
-
 /******** Footer Styles ********/
-
 footer {
   flex-direction: column;
   align-items: center;
@@ -248,7 +236,6 @@ footer .copyright {
   margin: 20px 0;
 }
 
-
 /* -------------------- Mobile First - Main Styles -------------------- */
 
 /******** Home Styles ********/
@@ -262,7 +249,14 @@ footer .copyright {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 500px;
- }
+}
+
+.hero-area h1 {
+  font-size: 2.25em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  line-height: 1.25em; /*2.6875em given by style tile but doesn't match design doc images*/
+  font-weight: 500;
+}
 
 /* Aside Styles*/
 aside {
@@ -319,7 +313,6 @@ input[type=button] {
 .features .features-items {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   flex-flow: row wrap;
 }
 
@@ -341,25 +334,18 @@ input[type=button] {
 }
 
 .reviews h2 {
-  margin-bottom: 40px;
+  margin-bottom: 40px; 
   line-height: 1em; /*1.875em; given by style tile but doesn't match design doc images*/
 }
 
 .reviews h3 {
   width: 55%;
-  /* margin: 20px 0; solution says this should be present, but unsure what its presence or lack changes*/
+  margin: 20px 0;
 }
 
 /******** About Styles ********/
-
 .mission {
   background-color: #527158;
-  display: flex;
-  justify-content: center;
-}
-
-.contact-section {
-  background-color: #2a423a;
   display: flex;
   justify-content: center;
 }
@@ -380,12 +366,17 @@ input[type=button] {
   left: 0;
 }
 
+.contact-section {
+  background-color: #2a423a;
+  display: flex;
+  justify-content: center;
+}
+
 .contact-content p {
   margin: 0;
 }
 
 /******** FAQ Styles ********/
-
 .faq {
   background-color: #527158;
   display: flex;
@@ -583,6 +574,10 @@ input[type=button] {
     width: 62%;
   }
 
+  .features i {
+    margin-bottom: 30px;
+  }
+
   /******** Reviews Styles ********/
   .reviews article {
     display: flex;
@@ -646,7 +641,7 @@ input[type=button] {
   }
 
   .mission-content p {
-    width: 45%;
+    width: 45.5%;
   }
 
   .map-container figure {
@@ -666,7 +661,6 @@ input[type=button] {
   .contact-content h4 {
     font-size: 1.5em;
   }
-
 
   /**************** FAQ Styles ****************/
   .faq .content-wrapper {
@@ -723,7 +717,6 @@ input[type=button] {
   .hero-area h1 {
     font-size: 3.75em;
     width: 70%;
-    /*key says 80%, will try if needed after styling*/
   }
 
   /******** Aside Styles ********/
@@ -745,10 +738,6 @@ input[type=button] {
     flex-basis: 33%;
   }
 
-  .features .features-item-description {
-    width: 63%;
-  }
-
   /******** Reviews Styles ********/
   .reviews h2 {
     padding-bottom: 50px;
@@ -763,11 +752,10 @@ input[type=button] {
   .contact-section .content-wrapper h2 {
     font-size: 3em;
     width: 90%;
-    /*key says 95%, will try if needed after styling*/
   }
 
   .map-container figure {
-    padding-bottom: 75%;
+    padding-bottom: 37.5%;
   }
 
   /**************** FAQ Styles ****************/
@@ -781,6 +769,7 @@ input[type=button] {
     font-size: 1.125em;
     line-height: 1.125em;
   }
+
 }
 
 /* ==========================================================================
