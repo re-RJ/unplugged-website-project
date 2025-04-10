@@ -93,45 +93,45 @@ textarea {
 } */
 
 html {
-	font-size: 1rem;
+  font-size: 1rem;
 }
- 
+
 body {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
   color: #e2e3ed;
   /* text-align: left; solution says this should be present, but unsure what its presence or lack changes*/
 }
- 
-ul, 
+
+ul,
 ol {
   list-style: none;
   padding: 0;
   margin: 0;
 }
- 
+
 a {
-	color: #e2e3ed;
+  color: #e2e3ed;
   text-decoration: none;
 }
- 
+
 h1 {
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;;
   font-size: 2.25em;
-  line-height: 2.6875em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  line-height: 1.25em; /*2.6875em given by style tile but doesn't match design doc images*/
   font-weight: 500;
 }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
 }
- 
-h3, 
+
+h3,
 h4 {
-  font-family: 'Poppins', sans-serif;
   font-size: 1.125em;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   margin: 20px 0;
 }
@@ -140,19 +140,19 @@ p {
   font-size: 0.875em;
   line-height: 1.125em;
 }
- 
+
 img {
- 
+  width: 100%;
 }
- 
+
 figure {
- 
+  margin: 0;
 }
- 
+
 address {
   font-style: normal;
 }
- 
+
 header,
 footer {
   display: flex;
@@ -179,6 +179,10 @@ header .content-wrapper {
   flex-flow: row wrap;
 }
 
+header figure {
+  width: 60%;
+}
+
 .header-divider {
   background-color: #3a3a3a;
   width: 100%;
@@ -197,7 +201,6 @@ header nav ul {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  /*solution says this should be 100%, by *{border} seems like it doesn't need width*/
 }
 
 
@@ -240,24 +243,61 @@ footer .copyright {
 
 
 /* -------------------- Mobile First - Main Styles -------------------- */
-/******** Global Styles ********/
 
 /******** Home Styles ********/
 
+/* Hero Styles*/
 .hero-area {
   display: flex;
   justify-content: center;
-}
+  background-image: url('../img/unplugged-retreat.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
+ }
 
+/* Aside Styles*/
 aside {
   background-color: #527158;
   display: flex;
   justify-content: center;
 }
 
+aside .form {
+  margin-top: 30px;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Features Styles*/
 .features {
   display: flex;
   justify-content: center;
+  background-image: url('../img/unplugged-retreat-features.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .features h2 {
@@ -286,6 +326,7 @@ aside {
   margin: 0;
 }
 
+/* Reviews Styles*/
 .reviews {
   background-color: #2a423a;
   display: flex;
@@ -294,7 +335,7 @@ aside {
 
 .reviews h2 {
   margin-bottom: 40px;
-  line-height: 1.5em;
+  line-height: 1em; /*1.875em; given by style tile but doesn't match design doc images*/
 }
 
 .reviews h3 {
@@ -338,15 +379,15 @@ aside {
 
 .faq h2 {
   margin-bottom: 40px;
-  line-height: 1.5em;
+  line-height: 1em; /*1.875em; given by style tile but doesn't match design doc images*/
 }
 
 .faq-content {
   margin-bottom: 50px;
 }
 
-.faq h4 {
-  font-size: 1.125em;
+.faq-content h4 {
+  line-height: 1.125em;
 }
 
 /* ==========================================================================
@@ -436,53 +477,21 @@ aside {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
-/****************************** Code for buttons ******************************/
-   aside .form {
-    margin-top: 30px;
-  }
-   
-  input[type=text] {
-    box-sizing: border-box;
-    width: 100%;
-    color: #2a423a;
-    font-style: italic;
-    padding: 1em;
-  }
-   
-  input[type=button] {
-    width: 100%;
-    padding: 20px 0;
-    margin-top: 20px;
-    background-color: #2a423a;
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    font-size: 1.125em;
-    color: #e2e3ed;
-    border: none;
-    text-align: center;
-    text-transform: uppercase;
-  }
-/****************************** Code for buttons ******************************/
+  
 
 @media only screen and (min-width: 768px) {
 
   /**************** Home Styles ****************/
-  h1{
-    font-size: 3em;
-    line-height: 3em;
-  }
-
-  h2{
+  h2 {
     font-size: 2.25em;
-    line-height: 3em;
+    line-height: 1.125em; /* 3em given by style tile but doesn't match design doc images*/
   }
 
-  h3{
+  h3 {
     font-size: 1.5em;
-    line-height: 1.875em;
+    line-height: 1.125em; /*1.875em given by style tile but doesn't match design doc images*/
   }
-  
+
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
@@ -498,6 +507,10 @@ aside {
     justify-content: space-between;
   }
 
+  header figure {
+    width: 30%;
+  }
+
   header nav {
     width: 25%;
   }
@@ -511,13 +524,18 @@ aside {
   }
 
   /******** Hero Styles ********/
+  .hero-area {
+    min-height: 600px;
+  }
+  
   .hero-area h1 {
+    font-size: 3em;
+    line-height: 1em; /*3em given by style tile but doesn't match design doc images*/
     margin: 0;
   }
 
   /******** Aside Styles ********/
   aside .content-wrapper {
-    width: 100%;
     margin: 50px 0;
     display: flex;
     justify-content: space-between;
@@ -549,13 +567,24 @@ aside {
     justify-content: space-between;
   }
 
-  .reviews article div {
-    width: 48%;
+  .reviews h2 {
+    width: 80%;
+  }
+
+  .reviews article div,
+  .reviews article figure {
+    width: 49%;
+
+  }
+
+  .reviews h3 {
+    width: 80%;
+    margin: 0;
   }
 
   /******** Footer Styles ********/
   footer .content-wrapper {
-    width: 85%;
+    width: 65%;
   }
 
   .footer-content {
@@ -570,6 +599,7 @@ aside {
 
   footer h4 {
     font-size: 1.5em;
+    margin-bottom: 40px;
   }
 
   footer p {
@@ -600,15 +630,16 @@ aside {
     width: 80%;
   }
 
-  .contact-content h4 {
-    font-size: 1.5em;
-  }
-
   .contact-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
   }
+
+  .contact-content h4 {
+    font-size: 1.5em;
+  }
+
 
   /**************** FAQ Styles ****************/
   .faq .content-wrapper {
@@ -626,7 +657,7 @@ aside {
   .faq h4,
   .faq p {
     font-size: 0.875em;
-    line-height: 0.984375em;
+    line-height: 1.125em; /*0.984375em given by style tile but doesn't match design doc images*/
   }
 
 }
@@ -634,16 +665,12 @@ aside {
 @media only screen and (min-width: 1200px) {
 
   /**************** Home Styles ****************/
-  h1{
-    font-size: 3.75em;
-  }
-
   h2 {
     font-size: 2.25em;
   }
 
   h3,
-  h4{
+  h4 {
     font-size: 1.875em;
   }
 
@@ -651,9 +678,9 @@ aside {
     font-size: 1.125em;
     line-height: 1.5em;
   }
-  
+
   .content-wrapper {
-    width: 960px;
+    max-width: 960px;
   }
 
   /******** Header Styles ********/
@@ -661,9 +688,15 @@ aside {
     padding: 15px 0;
   }
 
+  header nav {
+    width: 20%;
+  }
+
   /******** Hero Styles ********/
   .hero-area h1 {
-    width: 70%; /*key says 80%, will try if needed after styling*/
+    font-size: 3.75em;
+    width: 70%;
+    /*key says 80%, will try if needed after styling*/
   }
 
   /******** Aside Styles ********/
@@ -680,41 +713,36 @@ aside {
   .features h2 {
     width: 90%;
   }
-  
+
   .features article {
     flex-basis: 33%;
   }
 
-  .features .features-item-description { /*possibly unneeded, to be removed later*/
+  .features .features-item-description {
+    /*possibly unneeded, to be removed later*/
     width: 60%;
-  } 
+  }
 
   /******** Reviews Styles ********/
   .reviews h2 {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 
   .reviews article div {
     width: 44%;
   }
 
-  /******** Footer Styles ********/
-  footer .content-wrapper { /*possibly unneeded, to be removed later*/
-    width: 100%;
-  }
-
   /**************** About Styles ****************/
-  .mission h2 {
-    font-size: 3em;
-    width: 90%; /*key says 95%, will try if needed after styling*/
-  }
-
+  .mission h2,
   .contact-section .content-wrapper h2 {
-    width: 85%; /*key says 95%, will try if needed after styling*/
+    font-size: 3em;
+    width: 90%;
+    /*key says 95%, will try if needed after styling*/
   }
 
   /**************** FAQ Styles ****************/
   .faq h2 {
+    width: 100%;
     font-size: 3em;
   }
 
