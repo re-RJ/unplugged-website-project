@@ -99,12 +99,15 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  color: #e2e3ed;
   /* text-align: left; solution says this should be present, but unsure what its presence or lack changes*/
 }
  
 ul, 
 ol {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
  
 a {
@@ -113,7 +116,7 @@ a {
 }
  
 h1 {
-  font-family: ;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;;
   font-size: 2.25em;
   line-height: 2.6875em;
   font-weight: 500;
@@ -127,10 +130,10 @@ h2 {
  
 h3, 
 h4 {
-  margin: 20px 0;
   font-family: 'Poppins', sans-serif;
   font-size: 1.125em;
   font-weight: 500;
+  margin: 20px 0;
 }
 
 p {
@@ -150,14 +153,10 @@ address {
   font-style: normal;
 }
  
-.content-wrapper {
- 
-}
-
-
 header,
 footer {
   display: flex;
+  background: #202322;
 }
 
 .content-wrapper {
@@ -173,31 +172,34 @@ header {
 }
 
 header .content-wrapper {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 0;
 }
 
 .header-divider {
+  background-color: #3a3a3a;
   width: 100%;
+  height: 1px;
   margin: 10px 0 20px 0;
 }
 
 header nav {
   width: 60%;
   font-size: 1.125em;
-  
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 header nav ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 100%;
   /*solution says this should be 100%, by *{border} seems like it doesn't need width*/
-  
 }
+
 
 /******** Footer Styles ********/
 
@@ -205,6 +207,10 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+footer p {
+  margin: 0;
 }
 
 footer .content-wrapper {
@@ -215,21 +221,17 @@ footer .contact {
   margin-bottom: 50px;
 }
 
-footer p {
-  margin: 0;
-}
-
 footer .social-icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #527158;
 }
 
 footer .social-icons nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
 }
 
 footer .copyright {
@@ -248,12 +250,9 @@ footer .copyright {
 }
 
 aside {
+  background-color: #527158;
   display: flex;
   justify-content: center;
-}
-
-.input-divider {
-  margin: 20px 0;
 }
 
 .features {
@@ -263,6 +262,11 @@ aside {
 
 .features h2 {
   margin-bottom: 60px;
+}
+
+.features article {
+  width: 65%;
+  margin: 30px 0;
 }
 
 .features .features-items {
@@ -277,16 +281,13 @@ aside {
   font-size: 3.75em;
 }
 
-.features article {
-  width: 65%;
-  margin: 30px 0;
-}
-
 .features p {
+  text-align: center;
   margin: 0;
 }
 
 .reviews {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
 }
@@ -304,11 +305,13 @@ aside {
 /******** About Styles ********/
 
 .mission {
+  background-color: #527158;
   display: flex;
   justify-content: center;
 }
 
 .contact-section {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
 }
@@ -320,6 +323,7 @@ aside {
 /******** FAQ Styles ********/
 
 .faq {
+  background-color: #527158;
   display: flex;
   justify-content: center;
 }
@@ -327,7 +331,7 @@ aside {
 .faq .content-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-flow: row wrap;
   margin: 50px 0 0 0;
 }
@@ -433,9 +437,52 @@ aside {
    Modify as content requires.
    ========================================================================== */
 
+/****************************** Code for buttons ******************************/
+   aside .form {
+    margin-top: 30px;
+  }
+   
+  input[type=text] {
+    box-sizing: border-box;
+    width: 100%;
+    color: #2a423a;
+    font-style: italic;
+    padding: 1em;
+  }
+   
+  input[type=button] {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #2a423a;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.125em;
+    color: #e2e3ed;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
+/****************************** Code for buttons ******************************/
+
 @media only screen and (min-width: 768px) {
 
   /**************** Home Styles ****************/
+  h1{
+    font-size: 3em;
+    line-height: 3em;
+  }
+
+  h2{
+    font-size: 2.25em;
+    line-height: 3em;
+  }
+
+  h3{
+    font-size: 1.5em;
+    line-height: 1.875em;
+  }
+  
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
@@ -521,6 +568,14 @@ aside {
     margin: 0;
   }
 
+  footer h4 {
+    font-size: 1.5em;
+  }
+
+  footer p {
+    line-height: 1.125em;
+  }
+
   footer .copyright {
     width: 100%;
   }
@@ -545,6 +600,10 @@ aside {
     width: 80%;
   }
 
+  .contact-content h4 {
+    font-size: 1.5em;
+  }
+
   .contact-content {
     display: flex;
     justify-content: space-between;
@@ -563,11 +622,36 @@ aside {
   .faq h2 {
     width: 100%;
   }
+
+  .faq h4,
+  .faq p {
+    font-size: 0.875em;
+    line-height: 0.984375em;
+  }
+
 }
 
 @media only screen and (min-width: 1200px) {
 
   /**************** Home Styles ****************/
+  h1{
+    font-size: 3.75em;
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4{
+    font-size: 1.875em;
+  }
+
+  p {
+    font-size: 1.125em;
+    line-height: 1.5em;
+  }
+  
   .content-wrapper {
     width: 960px;
   }
@@ -621,6 +705,7 @@ aside {
 
   /**************** About Styles ****************/
   .mission h2 {
+    font-size: 3em;
     width: 90%; /*key says 95%, will try if needed after styling*/
   }
 
@@ -629,7 +714,15 @@ aside {
   }
 
   /**************** FAQ Styles ****************/
+  .faq h2 {
+    font-size: 3em;
+  }
 
+  .faq h4,
+  .faq p {
+    font-size: 1.125em;
+    line-height: 1.125em;
+  }
 }
 
 /* ==========================================================================
