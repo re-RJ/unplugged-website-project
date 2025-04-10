@@ -88,9 +88,9 @@ textarea {
    ========================================================================== */
 
 /* -------------------- Base Header - Footer Styles -------------------- */
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 header,
 footer {
@@ -399,7 +399,7 @@ aside {
   }
 
   /******** Hero Styles ********/
-    .hero-area h1 {
+  .hero-area h1 {
     margin: 0;
   }
 
@@ -468,57 +468,102 @@ aside {
     padding-top: 20px;
   }
 
-.mission-content p {
+  .mission-content p {
     width: 45%;
-  } 
+  }
 
-.contact-section .content-wrapper h2 {
+  .map figure {
+    height: 350px;
+  }
+
+  .contact-section .content-wrapper h2 {
     width: 80%;
   }
 
-.contact-content {
+  .contact-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
   }
 
   /**************** FAQ Styles ****************/
-.faq .content-wrapper {
+  .faq .content-wrapper {
     justify-content: space-between;
   }
 
-.faq-content {
+  .faq-content {
     flex-basis: 45%;
   }
 
-.faq h2 {
+  .faq h2 {
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
 
-  /******** Home Styles ********/
+  /**************** Home Styles ****************/
   .content-wrapper {
     width: 960px;
   }
 
-  footer .content-wrapper {
+  /******** Header Styles ********/
+  header {
+    padding: 15px 0;
+  }
+
+  /******** Hero Styles ********/
+  .hero-area h1 {
+    width: 70%; /*key says 80%, will try if needed after styling*/
+  }
+
+  /******** Aside Styles ********/
+  aside .content-wrapper {
+    justify-content: space-around;
+  }
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 30%;
+  }
+
+  /******** Feature Styles ********/
+  .features h2 {
+    width: 90%;
+  }
+  
+  .features article {
+    flex-basis: 33%;
+  }
+
+  .features .features-item-description { /*possibly unneeded, to be removed later*/
+    width: 60%;
+  } 
+
+  /******** Reviews Styles ********/
+  .reviews h2 {
+    margin-bottom: 50px;
+  }
+
+  .reviews article div {
+    width: 44%;
+  }
+
+  /******** Footer Styles ********/
+  footer .content-wrapper { /*possibly unneeded, to be removed later*/
     width: 100%;
   }
 
-  aside {
-    width: 80%;
+  /**************** About Styles ****************/
+  .mission h2 {
+    width: 90%; /*key says 95%, will try if needed after styling*/
   }
 
-  .features .features-items {
-    width: 85%;
+  .contact-section .content-wrapper h2 {
+    width: 85%; /*key says 95%, will try if needed after styling*/
   }
 
-
-  /******** About Styles ********/
-
-  /******** FAQ Styles ********/
+  /**************** FAQ Styles ****************/
 
 }
 
