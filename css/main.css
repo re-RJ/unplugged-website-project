@@ -316,7 +316,7 @@ input[type=button] {
   flex-flow: row wrap;
 }
 
-.features .fontawesome-icon {
+.features i {
   margin-bottom: 40px;
   font-size: 3.75em;
 }
@@ -573,8 +573,7 @@ input[type=button] {
   }
 
   .features .features-item-description {
-    width: 50%;
-    margin-top: 30px;
+    width: 62%;
   }
 
   /******** Reviews Styles ********/
@@ -735,8 +734,7 @@ input[type=button] {
   }
 
   .features .features-item-description {
-    /*possibly unneeded, to be removed later*/
-    width: 60%;
+    width: 63%;
   }
 
   /******** Reviews Styles ********/
