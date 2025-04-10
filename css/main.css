@@ -638,8 +638,8 @@ input[type=button] {
     width: 45%;
   }
 
-  .map figure {
-    height: 350px;
+  .map-container figure {
+    padding-bottom: 58.3333%;
   }
 
   .contact-section .content-wrapper h2 {
@@ -754,6 +754,10 @@ input[type=button] {
     font-size: 3em;
     width: 90%;
     /*key says 95%, will try if needed after styling*/
+  }
+
+  .map-container figure {
+    padding-bottom: 75%;
   }
 
   /**************** FAQ Styles ****************/
