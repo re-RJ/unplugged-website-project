@@ -228,13 +228,20 @@ footer .social-icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #527158;
 }
 
-footer .social-icons nav ul li {
+footer .social-icons p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #527158;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+footer .social-icons p i {
+  font-size: 1.3125em;
 }
 
 footer .copyright {
@@ -619,6 +626,11 @@ input[type=button] {
 
   footer p {
     line-height: 1.125em;
+  }
+
+  footer .social-icons {
+    width: 13em;
+    justify-content: space-between; 
   }
 
   footer .copyright {
